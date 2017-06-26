@@ -12,3 +12,6 @@ cat /proc/cpuinfo| grep "processor"| wc -l
 
 # 查看CPU信息（型号）
 cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
+
+# 查看显卡的硬件信息 
+lspci | grep -i vga
