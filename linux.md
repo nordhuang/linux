@@ -16,6 +16,9 @@ cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
 # 查看显卡的硬件信息 
 lspci | grep -i vga
 
+# 搜索用户目录下，超过800M大小的文件并删除
+find ~ -type f -size +800M | xargs -n 1 -P 128 rm -f
+
 # apt-get安装目录和安装路径
 apt-get 下载后，软件所在路径是：/var/cache/apt/archives
 
